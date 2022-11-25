@@ -1,0 +1,21 @@
+#loginBackground{
+    -fx-background-image: url("../images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+#loginPane{
+    -fx-background-color: rgba(28, 28, 28, 0.905);
+    -fx-background-radius: 5px;
+}
+
+
+/* Home Section */
+#VboxBack{
+    -fx-background-color: black;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+}

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.HomeController">
+   <children>
+      <HBox layoutX="288.0" prefHeight="691.0" prefWidth="994.0">
+         <children>
+            <TableView fx:id="deliveriesDataTableView" prefHeight="691.0" prefWidth="1009.0" stylesheets="@../resources/css/style.css">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="41.333343505859375" text="ID" />
+                <TableColumn fx:id="modelColumn" minWidth="0.0" prefWidth="129.60003662109375" text="Car Model" />
+                  <TableColumn fx:id="brandColumn" prefWidth="135.19989013671875" text="Brand" />
+                  <TableColumn fx:id="colorColumn" prefWidth="103.2000732421875" text="Color" />
+                  <TableColumn fx:id="cityColumn" minWidth="0.0" prefWidth="147.46661376953125" text="City" />
+                  <TableColumn fx:id="countryColumn" prefWidth="128.26666259765625" text="Country" />
+                  <TableColumn fx:id="dateColumn" prefWidth="108.00006103515625" text="Delivery Date" />
+                  <TableColumn fx:id="buyerNameColumn" minWidth="0.0" prefWidth="200.800048828125" text="Buyer's Name" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <VBox id="VboxBack" prefHeight="690.0" prefWidth="289.0" stylesheets="@../resources/css/style.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="287.0" text="Car Delivery" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" top="25.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="287.0" text="System" textFill="WHITE">
+               <font>
+                  <Font name="Bauhaus 93" size="38.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="-48.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="model" prefHeight="35.0" promptText="Car Model">
+               <VBox.margin>
+                  <Insets bottom="7.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="brand" prefHeight="35.0" promptText="Brand">
+               <VBox.margin>
+                  <Insets bottom="7.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="color" prefHeight="35.0" promptText="Color">
+               <VBox.margin>
+                  <Insets bottom="7.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="city" prefHeight="35.0" promptText="City">
+               <VBox.margin>
+                  <Insets bottom="7.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="country" prefHeight="35.0" promptText="Country">
+               <VBox.margin>
+                  <Insets bottom="7.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Label prefHeight="32.0" prefWidth="244.0" text="Delivary Date" textFill="#f4f4f4">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="23.0" />
+               </VBox.margin>
+            </Label>
+            <DatePicker fx:id="date" prefHeight="25.0" prefWidth="243.0" promptText="yyyy-mm-dd">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" />
+               </VBox.margin>
+            </DatePicker>
+            <TextField fx:id="buyerName" prefHeight="35.0" promptText="Buyer's Name">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addCarBtn" maxHeight="40.0" mnemonicParsing="false" onAction="#addDelivery" prefHeight="40.0" prefWidth="258.0" text="Add Delivery">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Lucida Fax Italic" size="13.0" />
+               </font>
+            </Button>                               
+            <Button fx:id="updateCarBtn" maxHeight="40.0" mnemonicParsing="false" onAction="#updateDelivery" prefHeight="45.0" prefWidth="258.0" text="Update Delivery">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Lucida Fax Italic" size="13.0" />
+               </font>
+            </Button>                             
+            <Button fx:id="deleteCarBtn" maxHeight="40.0" mnemonicParsing="false" onAction="#deleteDelivery" prefHeight="45.0" prefWidth="258.0" text="Delete Delivery">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Lucida Fax Italic" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearFormBtn" layoutX="10.0" layoutY="172.0" maxHeight="40.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="40.0" prefWidth="258.0" text="Clear Form">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Lucida Fax Italic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
